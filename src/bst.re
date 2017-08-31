@@ -20,11 +20,6 @@ let rec printTree = fun (node: node) => {
   }
 };
 
-/* OLD -- switch(left){
-  | Node ln => printTree (Node ln)
-  | Empty => print_string ""
-}; */
-
 /* insert. Checks if node is empty. if it is, returns a node with a value */
 let rec insert = fun (node: node) (value: int) => {
   switch(node){
@@ -38,12 +33,6 @@ let rec insert = fun (node: node) (value: int) => {
   };
 };
 
-/* OLD */
-/* switch(l){
-  | Empty => Node (v, Node (value, Empty, Empty), r)
-  | Node no => Node (v, (insert (Node no) value), r) 
-} */
-  
 let test = Node (5, Empty, Empty);
 let inserted = insert (insert (insert test 1) 10) 20;
 
