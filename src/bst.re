@@ -6,14 +6,14 @@ type node =
   | Empty;
 
 /* LCR Printing. Should print tree values in ASC order */
-let rec printTree = fun (node: node) => {
+let rec print = fun (node: node) => {
   switch(node){
     | Node n => {
       let (v, left, right) = n;
-      printTree left;
+      print left;
       print_int v;
       print_string ", ";
-      printTree right;
+      print right;
     } 
     | Empty => print_string ""
   }
@@ -58,5 +58,5 @@ let inserted = insert (insert (insert test 1) 10) 20;
 let correct = Node (5, Node (1, Empty, Empty), Node (10, Empty, Node (20, Empty, Empty)));
 
 /* print_string ((find inserted 19) ? "true" : "false"); */
-/* printTree (insert (insert Empty 10) 5) */
-printTree inserted;
+/* print (insert (insert Empty 10) 5) */
+print inserted;
