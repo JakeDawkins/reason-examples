@@ -4,7 +4,6 @@
 type node = 
   | Node (int, node, node)
   | Empty;
-let emptyNode = Node (0, Empty, Empty);
 
 /* LCR Printing. Should print tree values in ASC order */
 let rec printTree = fun (node: node) => {
