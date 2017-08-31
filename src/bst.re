@@ -9,24 +9,21 @@ let emptyNode = Node (0, Empty, Empty);
 /* LCR Printing. Should print tree values in ASC order */
 let rec printTree = fun (node: node) => {
   switch(node){
-  | Node n => {
-    let (v, left, right) = n;
-    /* switch(left){
-      | Node ln => printTree (Node ln)
-      | Empty => print_string ""
-    }; */
-    printTree left;
-    print_int v;
-    print_string ", ";
-    printTree right;
-    /* switch(right){
-      | Node ln => printTree (Node ln)
-      | Empty => print_string ""
-    }; */
-  } 
-  | Empty => print_string ""
+    | Node n => {
+      let (v, left, right) = n;
+      printTree left;
+      print_int v;
+      print_string ", ";
+      printTree right;
+    } 
+    | Empty => print_string ""
   }
 };
+
+/* OLD -- switch(left){
+  | Node ln => printTree (Node ln)
+  | Empty => print_string ""
+}; */
 
 /* insert. Checks if node is empty. if it is, returns a node with a value */
 let rec insert = fun (node: node) (value: int) => {
