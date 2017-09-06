@@ -1,6 +1,6 @@
 # Reason Data Structures
 
-**HEY!**, I've moved the sorting algorithms that were here to [reason-sorting-algorithms](https://github.com/JakeDawkins/reason-sorting-algorithms). Check it! 💯
+**HEY!** I've moved the sorting algorithms that were here to [reason-sorting-algorithms](https://github.com/JakeDawkins/reason-sorting-algorithms). Check it! 💯
 
 This is just a project I'm working on showcasing some basic data structures in Reason. Spoiler: some of them are _very_ slim wrappers around existing reason modules.
 
