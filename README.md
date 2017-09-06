@@ -8,6 +8,13 @@ Feel free to play around with whatever you want though 👍. Hit me up on [twitt
 
 **Side Note**: I built this using bucklescript and `bs-platform` because I can't get the reason cli installed on my computer at the moment (path too long. thanks nvm).
 
+## Current Data Structures
+
+- [Binary Search Tree](src/bst.re)
+  - [What is a BST](https://en.wikipedia.org/wiki/Binary_search_tree)
+- [Stack](src/stack.re)
+  - [What is a stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+
 # Build
 
 ```
