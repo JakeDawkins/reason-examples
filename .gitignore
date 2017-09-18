@@ -26,3 +26,5 @@ lib/bs
 
 node_modules
 lib/bs
+
+.DS_Store
