@@ -26,13 +26,13 @@ let push = fun (stack: stack, value: int) => {
 
 /* access top item, but doesn't remove */
 /* Error when peeking at an empty stack */
-let peek = fun (stack: stack) => {
+let peek = (stack: stack) => {
   List.hd(stack);
 };
 
 /* removes top item, but doesn't return it. Returns the new stack */
 /* Error when popping from an empty stack */
-let pop = fun (stack: stack) => {
+let pop = (stack: stack) => {
   List.tl(stack);
 };
 

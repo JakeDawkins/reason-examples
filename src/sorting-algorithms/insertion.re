@@ -17,7 +17,7 @@
   It does so, by taking the list and folding it using `insert`.
 */
 
-let rec insert = fun (a: list(int), v: int) => {
+let rec insert = (a: list(int), v: int) => {
   switch(List.length(a)){
   | 0 => [v]
   | 1 => v > (List.hd(a)) ? [(List.hd(a)), v] : [v, List.hd(a)]
@@ -25,15 +25,15 @@ let rec insert = fun (a: list(int), v: int) => {
   };
 };
 
-let sort = fun (a: list(int)) => {
+let sort = (a: list(int)) => {
   List.fold_left(insert, [], a);
 };
 
 
 /* TESTS */
 
-let print = fun (a: list(int)) => {
-  List.iter((fun (v) => {
+let print = (a: list(int)) => {
+  List.iter(((v) => {
     print_int(v);
     print_string(", ");
   }), a);

@@ -6,7 +6,7 @@ type node =
   | Empty; 
 
 /* LCR Printing. Should print tree values in ASC order */
-let rec print = fun (node: node) => {
+let rec print = (node: node) => {
   switch node {
     | Node(v, left, right) => {
       print(left);
@@ -19,7 +19,7 @@ let rec print = fun (node: node) => {
 };
 
 /* checks if `value` is anywhere in the tree recursively */
-let rec find = fun (node: node, value: int) => {
+let rec find = (node: node, value: int) => {
   switch (node){
     | Empty => false
     | Node(v, l, r) => {
@@ -35,7 +35,7 @@ let rec find = fun (node: node, value: int) => {
   3. recursively calls until an empty node is found and inserts
   * NOTE: Does not currently check for existing values
 */
-let rec insert = fun (node: node, value: int) => {
+let rec insert = (node: node, value: int) => {
   switch(node){
     | Node(v, l, r) => {
       (value < v) 

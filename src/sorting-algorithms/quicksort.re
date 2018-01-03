@@ -14,8 +14,8 @@ let rec sort = (l: list(int)) =>
 
 /* TESTS */
 
-let print = fun (a: list(int)) => {
-  List.iter((fun (v) => {
+let print = (a: list(int)) => {
+  List.iter(((v) => {
     print_int(v);
     print_string(", ");
   }), a);
