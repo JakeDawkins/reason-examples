@@ -1,16 +1,11 @@
 let rec sort = (l: list(int)) =>
-  if ( List.length(l) > 1 ) {
-    let hd = List.hd(l);
-    List.concat([
-      (sort(List.filter((fun (x) => x < hd), (List.tl(l))))), 
-      [hd], 
-      (sort(List.filter((fun (x) => x >= hd), (List.tl(l)))))
-    ]);
-  } else {
-    l;
-  };
-
-
+  List.length(l) > 1 
+    ? List.concat([
+      (sort(List.filter(x => x < List.hd(l), List.tl(l)))), 
+      [List.hd(l)], 
+      (sort(List.filter(x => x >= List.hd(l), List.tl(l))))
+    ])
+    : l;
 
 /* TESTS */
 
