@@ -23,7 +23,7 @@ let rec find = (node: node, value: int) => {
   switch (node){
     | Empty => false
     | Node(v, l, r) => {
-      (v == value) || (value < v ? (find(l, value)) : (find(r, value)));
+      v == value || value < v ? find(l, value) : find(r, value);
     }
   }
 };
